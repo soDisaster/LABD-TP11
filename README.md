@@ -45,8 +45,8 @@ FILTER (xsd:integer(?t) > 20)
 ```
 
 
-Question 4
-----------
+Question 4.1
+------------
 
 ```
 PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
@@ -54,6 +54,20 @@ SELECT  * WHERE{
  ?x humans:shoesize ?t
 }
 ```
+
+Question 4.2
+------------
+```
+PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
+SELECT  * WHERE{
+
+ ?x a humans:Person
+OPTIONAL {?x humans:shoesize ?s }
+}
+```
+
+Question 5
+----------
 
 
 
