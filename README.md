@@ -81,6 +81,18 @@ OPTIONAL {?x humans:shoesize ?s  FILTER (xsd:integer(?s )> 8 )}
 }
 ```
 
+Question 4.4
+------------
+
+```
+PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
+SELECT  * WHERE{
+
+ ?x a humans:Person
+FILTER EXISTS {?x humans:shoesize ?s  FILTER (xsd:integer(?s )> 8)}
+FILTER EXISTS {?x humans:trouserssize ?t  FILTER (xsd:integer(?t )> 12)}
+}
+```
 
 Question 5
 ----------
