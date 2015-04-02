@@ -51,6 +51,7 @@ Question 4.1
 ```
 PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
 SELECT  * WHERE{
+ ?x a humans:Person
  ?x humans:shoesize ?t
 }
 ```
@@ -65,6 +66,21 @@ SELECT  * WHERE{
 OPTIONAL {?x humans:shoesize ?s }
 }
 ```
+
+
+Question 4.3
+------------
+
+```
+PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
+SELECT  * WHERE{
+
+ ?x a humans:Person
+OPTIONAL {?x humans:shoesize ?s  FILTER (xsd:integer(?s )> 8 )}
+
+}
+```
+
 
 Question 5
 ----------
