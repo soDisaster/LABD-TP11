@@ -292,6 +292,11 @@ SELECT DISTINCT * WHERE
 Exercice 2
 ----------
 
+Question 1
+----------
+
+Il n'y a pas de "domain" dans la propriété age. 
+Mais nous pouvons supposer que celui-ci s'appliquer à la classe Animal, puis Male et Female et Man et Woman.
 
 Question 2
 ----------
@@ -315,34 +320,20 @@ SELECT *
 ```
 
 
-Question 4
-----------
+Question 4 & 5 & 6
+------------------
 
-Encore un problème 
-```
+Nous n'avons pas réussi à récupérer un attribut. 
+
 SELECT *
 WHERE {
   ?class rdf:type rdf:Property .
   ?class rdfs:comment ?c
- ?class rdf:ID ?i
- FILTER(?i = "shoesize")
+  ?class rdfs:label ?lab 
+FILTER (xsd:string(?lab) = "shoe size")
 }
-```
 
 
-Question 5
-----------
-
-Encore un problème
-
-?class rdf:ID ?i
-FILTER(?i = "Person")
-?x xml:lang ?l
-FILTER(?l = "fr")
-
-
-Question 6
-----------
 
 
 
