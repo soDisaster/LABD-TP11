@@ -376,38 +376,21 @@ Il en est de même pour Animal qui comprend Person.
 Question 2.1
 ------------
 
+```
+PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
+SELECT DISTINCT *  WHERE
+{
+?x a humans:Man
+?x humans:hasSpouse ?y
+}
+```
+
+Nous avons un seul resultat car les autres sont déclaré comme Person et non Man
+
 Question 2.2
 ------------
 
-
-Question 3
------------
-
-```
-PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
-SELECT DISTINCT ?x WHERE
-{
-?x a humans:Lecturer
-?x rdf:type ?t
-}
-```
-
-Question 4
-----------
-
-```
-PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
-SELECT DISTINCT ?x WHERE
-{
-?x humans:hasAncestor ?h
-
-}
-```
-
-
-
-
-
+Rien à changé ...
 
 
 
