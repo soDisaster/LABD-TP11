@@ -266,10 +266,10 @@ FILTER (?x != ?y)
 FILTER (xsd:integer(?sx) = xsd:integer(?sy))
 }
 ```
-Gaston et John ? 
+Gaston et John 
 Karl et Mark 
-Karl et Pierre ? 
-Mark et Pierre ?
+Karl et Pierre
+Mark et Pierre
 
 
 Question 8
