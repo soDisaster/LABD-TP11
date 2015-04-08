@@ -123,27 +123,24 @@ WHERE    {
 Question 6.1
 ------------
 
-Harry père de John
-John père de Mark
-Jack père de Harry
-Flora mère de Pierre
-Cahterine mère de Lucas
-Gaston père de Pierre
-Gaston père de Jack
-Laura mère de Catherine
 
-si Parent siginifie père/mère et pas oncle/tante/cousin_germain
+Propriété hasFather : 
 
-Sophie mère de John
+John est le père de Mark.
 
 
-Si nous ne prenons que hasChild nous avons :
+Propriété hasMother : 
 
-Harry père de John
-Jack père de Harry
-Flora mère de Pierre
-Gaston père de Pierre
-Gaston père de Jack
+Catherine est la mère de Lucas.
+
+Propriété hasChild nous avons :
+
+Harry est le père de John.
+Jack est le père de Harry.
+Flora est le mère de Pierre.
+Gaston est le père de Pierre.
+Gaston est le père de Jack.
+Laura est la mère de Catherine.
 
 
 Question 6.2
@@ -154,16 +151,13 @@ SELECT ?x WHERE
 {
  ?x a humans:Person
 ?x humans:hasChild ?son
-
-
-
 }
 ```
 
 Question 6.3
 ------------
 
-5 réponses 1 doublon (gaston)
+5 réponses dont 1 doublon, Gaston
 
 ```
 <?xml version="1.0" ?>
@@ -197,12 +191,11 @@ Question 6.4
 PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
 SELECT DISTINCT ?x WHERE
 {
- ?x a humans:Person
-?x humans:hasChild ?son
+?x humans:hasChild ?children
 
 }
 ```
-plus que 4 réponses
+Plus que 4 réponses
 
 ```
 <?xml version="1.0" ?>
@@ -235,7 +228,7 @@ PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
 SELECT DISTINCT ?x WHERE
 {
  ?x a humans:Man
-FILTER NOT EXISTS {?x humans:hasChild ?son}
+FILTER NOT EXISTS {?x humans:hasChild ?children}
 
 }
 ```
@@ -247,8 +240,8 @@ Question 6.6
 PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
 SELECT DISTINCT ?x WHERE
 {
- ?x a humans:Woman
-?x humans:hasChild ?son
+?x a humans:Woman
+OPTIONAL {?x humans:hasChild ?children}
 ?x humans:hasSpouse ?somebody
 }
 ```
@@ -256,11 +249,14 @@ SELECT DISTINCT ?x WHERE
 Question 7
 ------------
 
+
+????????????????? 
+
 ```
 PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
 SELECT DISTINCT ?x ?y WHERE
 {
- ?x a humans:Person
+?x a humans:Person
 ?y a humans:Person 
 ?x humans:shirtsize ?sx
 ?y humans:shirtsize ?sy
@@ -270,21 +266,63 @@ FILTER (?x != ?y)
 FILTER (xsd:integer(?sx) = xsd:integer(?sy))
 }
 ```
-Gaston -John
-Karl-Mark (ahah)
-Karl-Pierre
-Mark-Pierre
+Gaston et John ? 
+Karl et Mark 
+Karl et Pierre ? 
+Mark et Pierre ?
 
 
 Question 8
 ----------
 
 ```
+PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
+SELECT DISTINCT * WHERE
+{
+?x humans:hasFriend ?friend
+}
 ```
 
 Question 9
 ----------
 
 ```
-
+PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
+SELECT DISTINCT * WHERE
+{
+?x a humans:Woman
+}
 ```
+
+
+Exercice 2
+----------
+
+
+Question 2.
+
+
+SELECT DISTINCT ?class 
+WHERE {
+   ?class rdf:type rdfs:Class.
+}
+
+
+Question 3.
+
+SELECT *
+ WHERE {
+     ?subject rdfs:subClassOf ?s
+ }
+
+
+Question 4.
+
+SELECT *
+WHERE {
+  ?class rdf:type rdf:Property .
+  ?class rdfs:comment ?c
+}
+
+
+
