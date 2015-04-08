@@ -385,12 +385,12 @@ SELECT DISTINCT *  WHERE
 }
 ```
 
-Nous avons un seul resultat car les autres sont déclaré comme Person et non Man
+Nous avons un seul résultat car les autres sont déclarés comme Person et non Man
 
 Question 2.2
 ------------
 
-Rien à changé ...
+Rien a changé ...
 
 
 
