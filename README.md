@@ -277,7 +277,7 @@ Question 8
 
 ```
 PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
-SELECT DISTINCT * WHERE
+SELECT DISTINCT ?friend ?x WHERE
 {
 ?x humans:hasFriend ?friend
 }
