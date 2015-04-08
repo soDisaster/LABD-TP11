@@ -391,7 +391,7 @@ Nous avons un seul résultat car les autres sont déclarés comme Person et non 
 Question 2.2
 ------------
 
-Rien a changé ...
+Nous avons Karl et sa femme qui apparait car le hasFather donne le statut de Male
 
 
 Question 3
