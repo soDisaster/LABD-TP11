@@ -128,16 +128,16 @@ Propriété hasFather :
 
 
 Propriété hasMother : 
- -Catherine est la mère de Lucas.
+ - Catherine est la mère de Lucas.
 
 Propriété hasChild nous avons :
 
--Harry est le père de John.
--Jack est le père de Harry.
--Flora est le mère de Pierre.
--Gaston est le père de Pierre.
--Gaston est le père de Jack.
--Laura est la mère de Catherine.
+- Harry est le père de John.
+- Jack est le père de Harry.
+- Flora est le mère de Pierre.
+- Gaston est le père de Pierre.
+- Gaston est le père de Jack.
+- Laura est la mère de Catherine.
 
 
 Question 6.2
