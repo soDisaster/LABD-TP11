@@ -387,6 +387,7 @@ PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
 SELECT DISTINCT ?x WHERE
 {
 ?x a humans:Lecturer
+?x rdf:type ?t
 }
 
 
