@@ -403,13 +403,15 @@ Ces Person on un autre type affecté 'Lecturer' dans leur déclaration RDF
 PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
 SELECT DISTINCT * WHERE
 {
-?x  a humans:Man
-?p a humans:Person
+?x a humans:Man
+?x a humans:Person
 
-FILTER (?x = ?p)
 }
 ```
-Je n'ai pas john...
+
+John n'apparait pas dans cette requête. 
+John est déclaré en tant que Person et père, c'est donc un homme (classe Male). 
+
 
 Question 4
 ----------
@@ -422,7 +424,8 @@ SELECT DISTINCT ?x WHERE
 
 }
 ```
-les relations hasAncestor sont construite par les properties HasFather/Mother/Parent
+
+Les relations hasAncestor sont construites par les propriétés hasFather & hasMother & hasParent.
 
 
 
