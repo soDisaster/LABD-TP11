@@ -354,9 +354,28 @@ Exercice 3
 
 Question 1.1
 -----------
+```
+PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
+SELECT DISTINCT ?x ?y WHERE
+{
+?x a humans:Person
+```
+
+```
+PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
+SELECT DISTINCT ?x ?y WHERE
+{
+?x a humans:Animal
+}
+```
 
 Question 1.2
 ------------
+
+IL y beaucoups plus de résultats 
+car Person avec le rdfs comprend aussi les Man et Woman
+
+ET Animal comprend Person
 
 Question 2.1
 ------------
