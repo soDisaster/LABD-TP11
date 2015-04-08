@@ -380,9 +380,10 @@ Question 2.1
 PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
 SELECT DISTINCT *  WHERE
 {
-?x a humans:Man
+?x a humans:Male
 ?x humans:hasSpouse ?y
 }
+
 ```
 
 Nous avons un seul résultat car les autres sont déclarés comme Person et non Man
