@@ -347,6 +347,30 @@ FILTER(?i = "Person")
 FILTER(?l = "fr")
 
 
+Question 6
+----------
+
+
+
+Exercice 3
+----------
+
+Question 1.1
+-----------
+
+Question 1.2
+------------
+
+Question 2.1
+------------
+
+Question 2.2
+------------
+
+
+
+
+
 
 
 
