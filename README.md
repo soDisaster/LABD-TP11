@@ -123,23 +123,21 @@ WHERE    {
 Question 6.1
 ------------
 
+Propriété hasFather : 
+ - John est le père de Mark.
 
-- Propriété hasFather : 
- -- John est le père de Mark.
 
+Propriété hasMother : 
+ -Catherine est la mère de Lucas.
 
--Propriété hasMother : 
+Propriété hasChild nous avons :
 
---Catherine est la mère de Lucas.
-
--Propriété hasChild nous avons :
-
---Harry est le père de John.
---Jack est le père de Harry.
---Flora est le mère de Pierre.
---Gaston est le père de Pierre.
---Gaston est le père de Jack.
---Laura est la mère de Catherine.
+-Harry est le père de John.
+-Jack est le père de Harry.
+-Flora est le mère de Pierre.
+-Gaston est le père de Pierre.
+-Gaston est le père de Jack.
+-Laura est la mère de Catherine.
 
 
 Question 6.2
