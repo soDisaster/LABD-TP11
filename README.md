@@ -235,7 +235,7 @@ Question 6.6
 
 ```
 PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
-SELECT DISTINCT ?x WHERE
+SELECT DISTINCT ?x ?children WHERE
 {
 ?x a humans:Woman
 OPTIONAL {?x humans:hasChild ?children}
