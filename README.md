@@ -397,6 +397,8 @@ SELECT DISTINCT * WHERE
 
 }
 ````
+Ces Person on un autre type affecté 'Lecturer' dans leur déclaration RDF
+
 ```
 PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
 SELECT DISTINCT * WHERE
@@ -420,7 +422,7 @@ SELECT DISTINCT ?x WHERE
 
 }
 ```
-
+les relations hasAncestor sont construite par les properties HasFather/Mother/Parent
 
 
 
