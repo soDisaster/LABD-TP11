@@ -380,6 +380,16 @@ Question 2.2
 ------------
 
 
+Question 3
+-----------
+
+PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
+SELECT DISTINCT ?x WHERE
+{
+?x a humans:Lecturer
+}
+
+
 
 
 
