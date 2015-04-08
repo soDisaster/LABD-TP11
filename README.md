@@ -390,6 +390,20 @@ SELECT DISTINCT ?x WHERE
 ?x rdf:type ?t
 }
 
+Question 4
+----------
+
+PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
+SELECT DISTINCT ?x WHERE
+{
+?x humans:hasAncestor ?h
+
+}
+
+
+
+
+
 
 
 
