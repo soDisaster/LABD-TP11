@@ -398,15 +398,24 @@ Question 3
 
 ````
 PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
-SELECT DISTINCT ?x WHERE
+SELECT DISTINCT * WHERE
 {
 ?x a humans:Lecturer
 ?x rdf:type ?t
 
 }
 ````
+```
+PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
+SELECT DISTINCT * WHERE
+{
+?x  a humans:Man
+?p a humans:Person
 
-
+FILTER (?x = ?p)
+}
+```
+Je n'ai pas john...
 
 Question 4
 ----------
