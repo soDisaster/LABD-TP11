@@ -124,23 +124,22 @@ Question 6.1
 ------------
 
 
-Propriété hasFather : 
+- Propriété hasFather : 
+ -- John est le père de Mark.
 
-John est le père de Mark.
 
+-Propriété hasMother : 
 
-Propriété hasMother : 
+--Catherine est la mère de Lucas.
 
-Catherine est la mère de Lucas.
+-Propriété hasChild nous avons :
 
-Propriété hasChild nous avons :
-
-Harry est le père de John.
-Jack est le père de Harry.
-Flora est le mère de Pierre.
-Gaston est le père de Pierre.
-Gaston est le père de Jack.
-Laura est la mère de Catherine.
+--Harry est le père de John.
+--Jack est le père de Harry.
+--Flora est le mère de Pierre.
+--Gaston est le père de Pierre.
+--Gaston est le père de Jack.
+--Laura est la mère de Catherine.
 
 
 Question 6.2
@@ -263,10 +262,10 @@ FILTER (?x != ?y)
 FILTER (xsd:integer(?sx) = xsd:integer(?sy))
 }
 ```
-Gaston et John 
-Karl et Mark 
-Karl et Pierre
-Mark et Pierre
+- Gaston et John 
+- Karl et Mark 
+- Karl et Pierre
+- Mark et Pierre
 
 
 Question 8
@@ -373,10 +372,8 @@ SELECT DISTINCT ?x WHERE
 Question 1.2
 ------------
 
-Il a y beaucoups plus de résultats 
-car Person avec le rdfs comprend aussi les Man et Woman
-
-ET Animal comprend Person
+Il a y beaucoup plus de résultats. Person avec rdfs comprend aussi Man et Woman.
+Il en est de même pour Animal qui comprend Person.
 
 Question 2.1
 ------------
