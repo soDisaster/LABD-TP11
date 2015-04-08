@@ -299,30 +299,54 @@ Exercice 2
 ----------
 
 
-Question 2.
+Question 2
+----------
 
-
+```
 SELECT DISTINCT ?class 
 WHERE {
    ?class rdf:type rdfs:Class.
 }
+````
 
 
-Question 3.
+Question 3
+----------
 
+````
 SELECT *
  WHERE {
      ?subject rdfs:subClassOf ?s
  }
+```
 
 
-Question 4.
+Question 4
+----------
 
+Encore un problème 
+```
 SELECT *
 WHERE {
   ?class rdf:type rdf:Property .
   ?class rdfs:comment ?c
+ ?class rdf:ID ?i
+ FILTER(?i = "shoesize")
 }
+```
+
+
+Question 5
+----------
+
+Encore un problème
+
+?class rdf:ID ?i
+FILTER(?i = "Person")
+?x xml:lang ?l
+FILTER(?l = "fr")
+
+
 
 
 
