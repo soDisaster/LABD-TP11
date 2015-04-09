@@ -36,7 +36,7 @@ Nous obtenons 6 résultats.
 Question 3
 ----------
 
-```
+```sparql
 PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
 SELECT  * WHERE{
  ?x humans:age ?t
